@@ -1,3 +1,4 @@
 [submodule "fdict"]
-	path = fdict
-	url = git@github.com:zerothi/fdict.git
+	path = subprojects/fdict
+	url = git@github.com:jonaslb/fdict.git
+	branch = meson
