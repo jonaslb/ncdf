@@ -13,6 +13,7 @@ libnetcdf_dep = dependency(
   language: 'fortran'
 )
 
+root_dir = meson.source_root()
 subdir('src')
 
 ncdf_lib = library(
