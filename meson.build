@@ -3,6 +3,12 @@ project('ncdf', 'fortran',
   license : 'LGPLv3',
   default_options: ['default_library=static']
 )
+add_project_arguments('-DNCDF_4', language: 'fortran')
+
+mpi_dep = dependency('mpi', language: 'fortran', required: get_option('mpi'))
+if mpi_dep.found()
+  add_project_arguments('-DMPI', language: 'fortran')
+endif
 
 libfdict_dep = dependency(
   'fdict',
