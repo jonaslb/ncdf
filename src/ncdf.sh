@@ -6,7 +6,7 @@ if [ ! -z "$VPATH" ]; then
 fi
 
 if [ -z "$DIR_FDICT" ]; then
-    var_dir=$_vpath/../fdict
+    var_dir=$_vpath/../subprojects/fdict
 else
     var_dir=$DIR_FDICT
 fi

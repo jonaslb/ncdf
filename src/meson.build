@@ -5,7 +5,7 @@ preprocessor_args = (
     + ['-E', '-P', '-x', 'c', '-I.', '-I@0@'.format(root_dir), '-I./src', '-I@0@'.format(src_dir), '@INPUT0@', '-o', '@OUTPUT@']
 )
 sedfiltersrc = files(['filter.sed'])[0]
-shell_w_vpath = [find_program('env'), 'VPATH=@0@'.format(root_dir)]
+shell_w_vpath = [find_program('env'), 'VPATH=@0@'.format(src_dir)]
 
 inc_files = [
     'netcdf_ncdf_interface_.inc',

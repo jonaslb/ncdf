@@ -30,8 +30,8 @@ include $(TOP_DIR)/$(SMEKA_DIR)/Makefile.smeka
 .PHONY: prep-fdict lib-fdict clean-fdict
 prep-fdict:
 	($(MKDIR) $(MKDIR_FLAG_PARENT) fdict/obj ; cd fdict/obj ; \
-		$(ECHO) "TOP_DIR =../../$(TOP_DIR)/fdict" > Makefile ; \
-		$(ECHO) "include ../../$(TOP_DIR)/fdict/Makefile" >> Makefile )
+		$(ECHO) "TOP_DIR =../../$(TOP_DIR)/subprojects/fdict" > Makefile ; \
+		$(ECHO) "include ../../$(TOP_DIR)/subprojects/fdict/Makefile" >> Makefile )
 lib-fdict: prep-fdict
 ifdef SETUP
 	$(MAKE) -C fdict/obj SETUP=../../$(SETUP)
