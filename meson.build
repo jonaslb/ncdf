@@ -3,6 +3,7 @@ project('ncdf', 'fortran',
   license : 'LGPLv3',
   default_options: ['default_library=static']
 )
+install = not meson.is_subproject()
 add_project_arguments('-DNCDF_4', language: 'fortran')
 
 mpi_dep = dependency('mpi', language: 'fortran', required: get_option('mpi'))
@@ -26,6 +27,6 @@ ncdf_lib = library(
   'ncdf',
   ncdf_src,
   dependencies: [libfdict_dep, libnetcdf_dep],
-  install: true
+  install: install
 )
 ncdf_dep = declare_dependency(link_with: ncdf_lib)
